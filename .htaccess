@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule .* - [L]
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRULE ^([a-zA-Z0-9_-]+)$ /website/home.php?username=$1
