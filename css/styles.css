@@ -1,5 +1,11 @@
+@font-face{
+    font-family: Web-font;
+    src: url('../includes/UbuntuMono-R.ttf');
+}
 body{
     background-color: #fef;
+    font-family: Web-font;
+    color:rgb(0,87,138);
 }
 .post{
     border: 1px solid #59983b;
@@ -22,7 +28,7 @@ body{
     right:0;
     top:0;
     height:35px;
-    background-color:#59983b;
+    background-color: rgba(46,168,0,0.8);
     padding:5px 12.5% 5px 11.5%;    
 }
 #body{
@@ -58,7 +64,7 @@ body{
     cursor: pointer;
 }
 h1{
-    font-family: 'Calibri';
+    font-family: Web-font;
     margin-left: 325px;
 }
 img{
@@ -81,6 +87,7 @@ img{
 #post{
     margin-top: 2.5%;
     height: 5%;
+    font-family: Web-font;
     resize: none;
     border: none;
 }
