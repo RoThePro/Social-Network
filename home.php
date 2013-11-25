@@ -25,7 +25,7 @@ include 'includes/uheader.php';
 				}
 			?>
 			<div id="p_header">
-				<img id="p_image" src="includes/images/profile.png" width="100px" height="100px">
+				<img id="p_image" src="includes/images/profile.png" width="5.2%" height="9.2%">
 				<h1><?php echo $profile_data['fname'].' '.$profile_data['lname']?> </h1>
 			</div><br>
 			<div id="post_container">		
@@ -43,9 +43,8 @@ include 'includes/uheader.php';
 				</script>		
 				</div>
 				<input type="hidden" id="id" value="<?php echo $profile_data['user_id']?>">
-				<div id="posts">
-				
-				</div>
+				<br>
+				<div id="posts"/>
 			</div>
         </div>
     </body>

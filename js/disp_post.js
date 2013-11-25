@@ -1,3 +1,4 @@
+var regular_data;
 function disp_post(){
 	var hr = new XMLHttpRequest();
 	var profile_id = encodeURIComponent(document.getElementById("id").value);
@@ -8,6 +9,7 @@ function disp_post(){
 	hr.onreadystatechange = function(){
 		if(hr.readyState==4 && hr.status == 200){
 			var data = JSON.parse(hr.responseText);
+			regular_data=data.slice();
 			var results = document.getElementById("posts");
 			results.innerHTML = "";
 			for(var obj in data){
