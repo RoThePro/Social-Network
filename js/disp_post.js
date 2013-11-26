@@ -38,23 +38,15 @@ function disp_post(){
 function disp_comment(postid){
 	var hr = new XMLHttpRequest();
 	var profile_id = encodeURIComponent(document.getElementById("id").value);
-	var post_id = postid;
-	hr.open("GET", "disp_comment.php?id="+profile_id+"&post_id="+post_id, true);
+	hr.open("GET", "disp_comment.php?post_id="+postid, true);
 	hr.setRequestHeader("Content-type","application/json");
 	hr.onreadystatechange = function(){
 		if(hr.readyState==4 && hr.status == 200){
 			var data = JSON.parse(hr.responseText);
+			console.log(data);
 			if(data.length==0){
 				return;
 			}
-			var test = compare(regular_comment,data);
-			//console.log(test);
-			if(test){
-				setTimeout('disp_comment('+postid+')',1000);
-				return;
-			}			
-			regular_comment=data.slice();
-			console.log(regular_comment);
 			var results = document.getElementById("comments"+postid);
 			results.innerHTML = "";
 			for(var obj in data){
