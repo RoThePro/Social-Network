@@ -7,13 +7,13 @@ function add_post(){
 	hr.send(request);
 	document.getElementById('post').value = '';
 }
-function add_comment(){
-	var text = encodeURIComponent(document.getElementById('comment_box').value);
-	var id = encodeURIComponent(document.getElementById('post_id').value);
+function add_comment(id){
+	var text = encodeURIComponent(document.getElementById('comment_box'+id).value);
+	var id = id;
 	var hr = new XMLHttpRequest();
 	hr.open("POST","add_comment.php",true);
 	hr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	var request = "comment="+text+"&id="+id;
 	hr.send(request);
-	document.getElementById('comment_box').value = '';
+	document.getElementById('comment_box'+id).value = '';
 }
