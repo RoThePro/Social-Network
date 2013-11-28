@@ -21,14 +21,20 @@ function disp_post(){
 			for(var obj in data){
 				results.innerHTML += "<div class='post'>" 
 										+"<a href='../website/"+data[obj].username+"'>"+data[obj].fname+" "+data[obj].lname+"</a>"+"<br>"
-										+ data[obj].content								  
+										+ data[obj].content	
+										+ "<div id='like'><a href='javascript:void(0);'>Like</a></div>"							  
 								  + "<br/>"
+								  + "<div id='comment_container'>"
 								  + "<input type='text' id='comment_box"+data[obj].id+"' placeholder='Write a comment'>"
 								  + "<button onclick='add_comment("+data[obj].id+")'>Comment</button>"
 								  + "<div id='comments"+data[obj].id+"'/>"
 								  + "</div>"
+								  + "</div>"
 								  + "<br/>";
 				disp_comment(data[obj].id);
+				if(disp_comment(data[obj].id)=="No return"){
+					console.log("BAD");
+				}
 			}
 			setTimeout('disp_post()',500);
 		}
@@ -43,10 +49,6 @@ function disp_comment(postid){
 	hr.onreadystatechange = function(){
 		if(hr.readyState==4 && hr.status == 200){
 			var data = JSON.parse(hr.responseText);
-			console.log(data);
-			if(data.length==0){
-				return;
-			}
 			var results = document.getElementById("comments"+postid);
 			results.innerHTML = "";
 			for(var obj in data){

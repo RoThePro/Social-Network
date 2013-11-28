@@ -1,0 +1,1 @@
+var hr = new XMLHttpRequest();

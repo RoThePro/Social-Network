@@ -16,4 +16,5 @@ function add_comment(id){
 	var request = "comment="+text+"&id="+id;
 	hr.send(request);
 	document.getElementById('comment_box'+id).value = '';
+	console.log("Sent!");
 }

@@ -4,7 +4,6 @@
 	$id = $_POST['id'];
 	$user_id = $user_data['user_id'];
 	if(empty($comment)===false){
-		echo("HI");
 		mysql_query("INSERT INTO comments (`user_id`,`content`,`post_id`) VALUES ('$user_id','$comment','$id')");
 	}
 ?>
