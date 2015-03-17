@@ -1,27 +1,55 @@
 body{
-    font-family: Arvo;
+    font-family: Web-font;
     top:0;
+    background-color: #ECECEA;
+}
+@font-face{
+    font-family: Web-font;
+    src: url('../includes/UbuntuMono-R.ttf');
+}
+#header{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:35px;
+    background-color: rgba(46,168,0,0.8);
+    padding:5px 12.5% 5px 11.5%;
+}
+#movable{
+    position:absolute;
+    background-color: rgba(46,168,0,0.8); 
+    right:75px;
+    width:75px;
+    height:30px;
+    margin-top: 5px;
+    margin-left: 70%;
+    border-radius: 5px;
+}
+#movable2{
+    position:absolute;  
+    background-color:#abc;
+    right: 25px;
+    width:75px; 
+    height:30px;
+    margin-top: 5px;
+    margin-left: 90%;
+    border-radius: 5px;
 }
 #container{
     margin-top:7.5%;
 
 }
 #image{
-    margin-left:15%;
+    margin-left:10%;
     float: left;
 }
 #buttons{
-    float:right;
-    margin-right: 40%;
-    margin-top:12.5%;
-}
-#overlay{
-    background-color: rgba(255,255,255,0.75);
-    width: 100%;
-    height: 100%;
-    position:fixed;
-    top: 0;
-    left:0;
+    position: absolute;
+    /*float:right;*/
+    margin-right: 0%;
+    left: 55%;
+    margin-top:0%;
 }
 #box_frame{
     width:100%;
@@ -37,14 +65,39 @@ body{
     font-size: 24px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #eee;
+    background-color: #ffffff;
     box-shadow: 0px 0px 5px #57EF1E;
+}
+#xbutton{
+    float: right;
+    margin-top: -33px;
+    margin-right: -33px;
+}
+.loginslide{
+    position: absolute;
+    bottom: 71px;
+    height: 50px;
+    width: 420px;
+    /*background: #ECECEA;*/
+    /*border-radius: 6px;*/
+    left: 110px;
+    display: none;
+}
+.slide{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: -75px;
+    /*background: #ECECEA;*/
+    height: 340px;
+    width: 260px;
+    /*border-radius: 6px;*/
+    display: none;
 }
 .login{
     padding: 1.5%;
     background-color: #eee;
     border: 1px solid #27BC4B;
-    font-family: Arvo;
+    font-family: Web-font;
     font-size: 16px;
 
 }
@@ -56,39 +109,161 @@ body{
 .clear{
     clear: both;
 }
-.button{
-    color: white;
-    text-shadow: 2px 2px 5px #000000;
-    font-family: Arvo;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: #27BC4B;
-    box-shadow: inset 0px -5px 10px rgba(255,255,255,0.6);
-    height: 5%;
-    width: 300%;
-    margin:7.5%;
-    border: none;
+.loginregisterbutton {
+    -moz-box-shadow:inset 0px 1px 0px 0px #fceaca;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #fceaca;
+    box-shadow:inset 0px 1px 0px 0px #fceaca;
+    background-color:#ffce79;
+    -webkit-border-top-left-radius:6px;
+    -moz-border-radius-topleft:6px;
+    border-top-left-radius:6px;
+    -webkit-border-top-right-radius:6px;
+    -moz-border-radius-topright:6px;
+    border-top-right-radius:6px;
+    -webkit-border-bottom-right-radius:6px;
+    -moz-border-radius-bottomright:6px;
+    border-bottom-right-radius:6px;
+    -webkit-border-bottom-left-radius:6px;
+    -moz-border-radius-bottomleft:6px;
+    border-bottom-left-radius:6px;
+    transition:background-color .3s;
+    text-indent:0;
+    border:1px solid #eeb44f;
+    display:inline-block;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    font-style:normal;
+    height:40px;
+    line-height:40px;
+    width:100px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 6px #ce8e28;
+}.loginregisterbutton:active {
+    background-color:#CC6600;
 }
 .submit{
-    color: #555;
-    font-family: Arvo;
+    color: white;
+    font-family: Web-font;
     font-weight: bold;
     font-size: 16px;
     border-radius: 5px;
     background-color: #27BC4B;
     box-shadow: inset 0px -5px 10px rgba(255,255,255,0.6);
-    height: 7.5%;
+    height: 12%;
     margin: 2.5%;
-    width: 20%;
+    width: 30%;
     border: none;
 }
+#title{
+    /*margin-top: -30px;*/
+    font-family: Web-font;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    float: left;
+}
 #footer{
-    border-top: 1px solid rgba(0,150,0,0.75);
+    border-top: 1px solid #74AFAD;
     padding: 7.5px;
     font-size: 12px;
     position: absolute; 
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.registerinput {
+    position:relative;
+    width:200px;
+    right: 0px;
+    margin-left:10%;
+    margin-top: 0px;
+    background: #516283; 
+    background: #fff;
+    border-style: solid;
+    border-color: #919CB1;
+    border-radius: 6px;
+    border-width: 1px;
+    transition:border .5s;
+    transition:background .5s;
+    height:30px;
+    line-height: 18px; 
+    font-style: italic; 
+    padding:0 2px 0 2px;
+    font-family: Arial;
+    font-size: 15px;
+    color: #fff;
+    outline: none; 
+/*    -webkit-appearance: none; */
+}
+      
+.registerinput:focus{
+    background: #C2EBFF;
+    border: 1px solid #0099FF;
+    color: #999;
+}
+
+.logininputoriginal1 {
+    position:relative;
+    width:140px;
+    margin-top: 2.6%;
+    margin-left: 3%;
+    /*float:left;*/
+    /*right: 300px;*/
+    /*background: #516283; */
+    background: #fff;
+    border-style: solid;
+    border-color: #919CB1;
+    border-radius: 4px;
+    border-width: 1px;
+    transition:border .5s;
+    transition:background .5s;
+    height:30px;
+    line-height: 18px; 
+    font-style: italic; 
+    padding:0 2px 0 2px;
+    font-family: Web-font;  
+    font-size: 15px;
+    color: #fff;
+    outline: none; 
+}
+      
+.logininputoriginal1:focus{ 
+    background: #ECECEA;
+    border: 1px solid #516283;
+    color: #999;
+}
+
+.logininputoriginal2 {
+    position:relative;
+    width:140px;
+    margin-top: 2.6%;
+    /*float:right;*/
+    /*right:85px;*/
+    /*background: #516283; */
+    background: #fff;
+    border-style: solid;
+    border-color: #919CB1;
+    border-radius: 4px;
+    border-width: 1px;
+    transition:border .5s;
+    transition:background .5s;
+    height:30px;
+    line-height: 18px; 
+    font-style: italic; 
+    padding:0 2px 0 2px;
+    font-family: Web-font;  
+    font-size: 15px;
+    color: #fff;
+    margin-top: -30px;
+    outline: none; 
+}
+
+.logininputoriginal2:focus{ 
+    background: #ECECEA;
+    border: 1px solid #516283;
+    color: #999;
 }

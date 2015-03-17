@@ -2,7 +2,7 @@
     <html>
         <head>
             <link rel="stylesheet" href="css/footer.css"/>
-            <title>Chatterbox</title>
+            <title>Interesteen</title>
         </head>
         <body>
             <div id="header">
@@ -18,4 +18,4 @@
                 </ul>
             </div>
             <div id="content">
-                <?php include 'includes/aside.php';?>    
+                <?php include 'includes/aside.php';?>

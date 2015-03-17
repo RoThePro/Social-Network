@@ -1,6 +1,6 @@
 <div class="clear"/>
 <div id="footer">
-                &copy2013 Commenthis Inc. All Rights Reserved.
+                &copy2013 TeenCafe Inc. All Rights Reserved.
             </div>
             </div>            
             <div id="masthead">
